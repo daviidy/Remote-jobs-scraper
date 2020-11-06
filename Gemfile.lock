@@ -9,12 +9,15 @@ GEM
     mime-types-data (3.2020.1104)
     mini_portile2 (2.4.0)
     multi_xml (0.6.0)
-    nokogiri (1.10.10-x86_64-linux)
+    nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
 
 PLATFORMS
-  x86_64-linux
+  x64-mingw32
 
 DEPENDENCIES
   httparty
   nokogiri
+
+BUNDLED WITH
+   2.1.4
