@@ -67,7 +67,7 @@ Continue ? yes(y) or no(n)
 ```
 
 ## Live Demo
-[Click this link to play](https://repl.it/@daviidy/tictactoe)
+[Click this link to play](https://repl.it/@daviidy/Remote-jobs-scraper)
 
 ## Testing
 
