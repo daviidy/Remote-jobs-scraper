@@ -22,52 +22,34 @@ class Main
       puts "Please choose a number > 0"
       num = gets.chomp.to_i
     end
-
-    if not num
-      parsed_page = @scraper.get_all_jobs
-      total_jobs = @scraper.count_jobs(parsed_page)
-      puts "Loading..."
-      while @scraper.continue?(end_number, total_jobs)
-        for i in start...end_number
-          parse_result = @scraper.parse_result(parsed_page, i)
-          puts "#{i}- #{parse_result[i - 1][:title]}: #{parse_result[i - 1][:employer]}\nLink: https://remotive.io#{parse_result[i - 1][:link]}"
-        end
-        puts "Continue ? yes(y) or no(n)"
-        answer = gets.chomp
-        if (answer == "yes" || answer == "y")
-          start += (end_number - 1)
-          end_number += num
-        else
-          break
-        end
+    separator = "
+    ======================================
+    "
+    start = 1
+    end_number = num
+    parsed_page = @scraper.get_all_jobs(num, start, end_number)
+    total_jobs = @scraper.count_jobs(parsed_page)
+    puts "Loading..."
+    while @scraper.continue?(end_number, total_jobs)
+      records = []
+      for i in start...end_number
+        parse_result = @scraper.parse_result(parsed_page, i, records)
+        puts "#{i}- #{parse_result[i - 1][:title]}: #{parse_result[i - 1][:employer]}\nLink: https://remotive.io#{parse_result[i - 1][:link]}\n#{separator}"
       end
-    else
-      start = 1
-      end_number = num
-      parsed_page = @scraper.get_all_jobs(num, start, end_number)
-      total_jobs = @scraper.count_jobs(parsed_page)
-      puts "Loading..."
-      while @scraper.continue?(end_number, total_jobs)
-        records = []
-        for i in start...end_number
-          parse_result = @scraper.parse_result(parsed_page, i, records)
-          puts "#{i}- #{parse_result[i - 1][:title]}: #{parse_result[i - 1][:employer]}\nLink: https://remotive.io#{parse_result[i - 1][:link]}"
-        end
-        puts "Continue ? yes(y) or no(n)"
-        answer = gets.chomp
-        if (answer == "yes" || answer == "y")
-          start += (end_number - 1)
-          end_number += num
-        else
-          break
-        end
+      puts "Continue ? yes(y) or no(n)"
+      answer = gets.chomp
+      if (answer == "yes" || answer == "y")
+        start += (end_number - 1)
+        end_number += num
+      else
+        break
       end
-    end #end of if condition
+    end
 
 
   end #end of run method
 
 end # end of class
 
-main = Main.new
-main.run
+# main = Main.new
+# main.run
