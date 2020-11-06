@@ -69,6 +69,25 @@ Continue ? yes(y) or no(n)
 ## Live Demo
 [Click this link to play](https://repl.it/@daviidy/tictactoe)
 
+## Testing
+
+We used Rspec for testing our Scraper
+
+**What does this do?**
+
+- Test public methods created in Tic Tac Toe project
+
+**Description of Task to be completed**
+
+We checked if all the scraper methods return the right data
+
+**How should this be manually tested?**
+
+Clone this repo https://github.com/daviidy/Remote-jobs-scraper/tree/feature-branch
+Navigate to the project directory.
+install rspec with `gem install rspec` and then run `bundle install` to install all packages in gemfile
+And finally run `rspec --format d` to run the tests
+
 ## Author
 
 👤 **David Yao**
