@@ -1,4 +1,3 @@
-require '../bin/main.rb'
 require '../lib/scraper.rb'
 require 'httparty'
 require 'nokogiri'
