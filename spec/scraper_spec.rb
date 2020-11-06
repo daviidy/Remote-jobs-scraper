@@ -3,13 +3,12 @@ require '../lib/scraper.rb'
 require 'httparty'
 require 'nokogiri'
 require 'json'
-require 'simplecov'
 
 describe 'Remote Jobs Scraper' do
   describe Scraper do
     let(:scraper) { Scraper.new }
     let(:unparsed_page) { HTTParty.get('https://remotive.io/remote-jobs/software-dev') }
-    let (:parsed_page) { Nokogiri::HTML(unparsed_page) }
+    let(:parsed_page) { Nokogiri::HTML(unparsed_page) }
     describe '#initialize' do
       it 'scraper.url is a string' do
         expect(scraper.url.is_a?(String)).to eql(true)
