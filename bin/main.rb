@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # rubocop:disable all
 require './lib/scraper.rb'
 
