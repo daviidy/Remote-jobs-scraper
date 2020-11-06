@@ -19,3 +19,6 @@ PLATFORMS
 DEPENDENCIES
   httparty
   nokogiri
+
+BUNDLED WITH
+   2.1.4
