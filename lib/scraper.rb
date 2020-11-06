@@ -19,19 +19,21 @@ class Scraper
   def get_all_jobs(num = 20, start = 1, end_number = 20)
     unparsed_page = HTTParty.get('https://remotive.io/remote-jobs/software-dev')
     parsed_page = Nokogiri::HTML(unparsed_page)
-
-    total_jobs = parsed_page.css('a.job-tile-title').map(&:text).count
-    
+    parsed_page
   end #end function get_all_jobs
+
+  def count_jobs(parsed_page)
+    total_jobs = parsed_page.css('a.job-tile-title').map(&:text).count
+    total_jobs
+  end
 
   def continue?(end_number, total_jobs)
     return true if end_number < total_jobs
     false
   end
 
-  def parse_result(parsed_page, start, end_number)
-    records = []
-    for i in start...end_number
+  def parse_result(parsed_page, i, records)
+
       job = parsed_page.css("a.job-tile-title").map(&:text)[i]
       link = parsed_page.css("a.job-tile-title").map{|item| item.attribute('href').value}[i]
       employer = parsed_page.css('p.tw-text-xs').map(&:text)[i]
@@ -42,8 +44,7 @@ class Scraper
         "link": link,
       }
       records << record_hash
-      puts "#{i}- #{records[i - 1][:title]}: #{records[i - 1][:employer]}\nLink: https://remotive.io#{records[i - 1][:link]}"
-    end
+      records
   end
 
 end # end of class
