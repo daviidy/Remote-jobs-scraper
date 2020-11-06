@@ -23,7 +23,7 @@ This website is one of the very famous websites about remote jobs.
 - Set `bin/main.rb` as executable file
 - Open your terminal and run `bin/main.rb`
 
-### How to play
+### How to use the scraper
 
 1- Enter your name to start
 
