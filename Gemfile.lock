@@ -13,8 +13,11 @@ GEM
       mini_portile2 (~> 2.4.0)
 
 PLATFORMS
-  x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   httparty
   nokogiri
+
+BUNDLED WITH
+   2.1.4
