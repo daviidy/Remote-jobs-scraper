@@ -10,7 +10,7 @@ class Main
 
   def run
 
-    puts "Hello, what's your name?" 
+    puts "Hello, what's your name?"
 
     name = gets.chomp
 
@@ -52,5 +52,5 @@ class Main
 
 end # end of class
 
-main = Main.new
-main.run
+# main = Main.new
+# main.run
