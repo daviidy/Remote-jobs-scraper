@@ -1,5 +1,5 @@
 # rubocop:disable all
-require 'httparty'
+require 'open-uri'
 require 'nokogiri'
 require 'json'
 
@@ -17,8 +17,7 @@ class Scraper
   attr_accessor :end_number
 
   def get_all_jobs(num = 20, start = 1, end_number = 20)
-    unparsed_page = HTTParty.get('https://remotive.io/remote-jobs/software-dev')
-    parsed_page = Nokogiri::HTML(unparsed_page)
+    parsed_page = Nokogiri::HTML(open(@url))
     parsed_page
   end #end function get_all_jobs
 

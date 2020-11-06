@@ -52,5 +52,5 @@ class Main
 
 end # end of class
 
-# main = Main.new
-# main.run
+main = Main.new
+main.run
