@@ -23,7 +23,6 @@ PLATFORMS
 DEPENDENCIES
   httparty
   nokogiri
-  simplecov (~> 0.19.1)
 
 BUNDLED WITH
    2.1.4
