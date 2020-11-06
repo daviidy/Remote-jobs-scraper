@@ -2,7 +2,7 @@
 Web scraper to get all the remote software development jobs on [remote.io](https://remotive.io)
 We used Nokogiri gem
 
-![screenshot](screenshot.png)
+![screenshot](./screenshot.png)
 
 ## Built With
 
