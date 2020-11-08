@@ -5,7 +5,7 @@ require 'json'
 describe 'Remote Jobs Scraper' do
   describe Scraper do
     let(:scraper) { Scraper.new }
-    let(:parsed_page) { Nokogiri::HTML(open 'https://remotive.io/remote-jobs/software-dev') }
+    let(:parsed_page) { Nokogiri::HTML(open('https://remotive.io/remote-jobs/software-dev')) }
     describe '#initialize' do
       it 'scraper.url is a string' do
         expect(scraper.url.is_a?(String)).to eql(true)
