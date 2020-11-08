@@ -32,7 +32,7 @@ class Main
     puts 'Loading...'
     records = []
     while @scraper.continue?(end_number, total_jobs)
-      (start..end_number).each do |_i|
+      (start..end_number).each do |index|
         parse_result = @scraper.parse_result(parsed_page, index, records)
         puts "#{index}- #{parse_result[index - 1][:title]}: #{parse_result[index - 1][:employer]}\nLink: https://remotive.io#{parse_result[index - 1][:link]}\n#{separator}"
       end
