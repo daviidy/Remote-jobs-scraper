@@ -11,10 +11,10 @@ class Scraper
     @start = 1
     @end_number = 20
   end
-  attr_accessor :url
-  attr_accessor :num
-  attr_accessor :start
-  attr_accessor :end_number
+  attr_reader :url
+  attr_reader :num
+  attr_reader :start
+  attr_reader :end_number
 
   def get_all_jobs(num = 20, start = 1, end_number = 20)
     parsed_page = Nokogiri::HTML(open(@url))
