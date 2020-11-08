@@ -51,7 +51,6 @@ You can type `yes(y)` to see the next n jobs or `no(n)` to exit the scraper
 
 How many jobs do you want to see per page ? Choose a number > 0
 3
-[DEPRECATION] HTTParty will no longer override `response#nil?`. This functionality will be removed in future versions. Please, add explicit check `response.body.nil? || response.body.empty?`. For more info refer to: https://github.com/jnunemaker/httparty/issues/568
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/nokogiri-1.10.10-x64-mingw32/lib/nokogiri/html/document.rb:199:in `parse'
 Loading...
 1- Engineering Manager (m/f/d): cargo.one· Remote (Selected Countries)
