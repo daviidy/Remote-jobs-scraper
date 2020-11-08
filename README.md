@@ -18,8 +18,10 @@ This website is one of the very famous websites about remote jobs.
 
 **To get this project set up on your local machine, follow these simple steps:**
 
-- Clone the github repository https://github.com/daviidy/Remote-jobs-scraper/tree/feature-branch on your local machine
+- Clone the github repository https://github.com/daviidy/Remote-jobs-scraper/tree/feature-branch on your local machine. Run `git clone https://github.com/daviidy/Remote-jobs-scraper/tree/feature-branch`
 - Cd into the clone folder
+- If it's not done yet, install Bundler by running `gem install bundler`
+- Run `bundle install` the required gems
 - Set `bin/main.rb` as executable file
 - Open your terminal and run `bin/main.rb`
 
