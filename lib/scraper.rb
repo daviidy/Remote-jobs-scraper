@@ -19,7 +19,7 @@ class Scraper
   def get_all_jobs(num = 20, start = 1, end_number = 20)
     parsed_page = Nokogiri::HTML(open(@url))
     parsed_page
-  end #end function get_all_jobs
+  end
 
   def count_jobs(parsed_page)
     total_jobs = parsed_page.css('a.job-tile-title').map(&:text).count
@@ -46,4 +46,4 @@ class Scraper
       records
   end
 
-end # end of class
+end

@@ -48,9 +48,9 @@ class Main
     end
 
 
-  end #end of run method
+  end
 
-end # end of class
+end
 
 main = Main.new
 main.run

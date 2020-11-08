@@ -1,27 +1,22 @@
 AllCops:
   Exclude:
-    - 'Guardfile'
-    - 'Rakefile'
+    - "Guardfile"
+    - "Rakefile"
 
   DisplayCopNames: true
 
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
-  Max: 100
+  Max: 20
 Metrics/AbcSize:
-  IgnoredMethods: ["play", "display", "evaluate", "minimax"]
+  Max: 50
 Metrics/ClassLength:
   Max: 150
-Naming/MethodParameterName:
-  MinNameLength: 1
-Metrics/CyclomaticComplexity:
-  IgnoredMethods: ["play", "minimax"]
-Metrics/PerceivedComplexity:
- IgnoredMethods: ["play", "minimax"]
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
   Max: 30
+
 
 Style/Documentation:
   Enabled: false
