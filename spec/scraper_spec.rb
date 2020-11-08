@@ -1,4 +1,4 @@
-require '../lib/scraper.rb'
+require_relative '../lib/scraper'
 require 'httparty'
 require 'nokogiri'
 require 'json'
