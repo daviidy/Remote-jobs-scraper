@@ -39,6 +39,10 @@ describe 'Remote Jobs Scraper' do
       it 'should return true if first param < second param' do
         expect(scraper.continue?(20, 300)).to eql(true)
       end
+
+      it 'should return false if first param > second param' do
+        expect(scraper.continue?(400, 300)).to eql(false)
+      end
     end
 
     describe '#parse_result' do
